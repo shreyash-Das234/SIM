@@ -1,0 +1,12 @@
+net user
+net user /Add <username>
+net user <username> <password>
+
+john the ripper:
+
+cd <john the ripper -> run folder loc.>
+john
+cd <PwDump7 folder loc.>
+PwDump7.exe > hash.txt
+john --format
+

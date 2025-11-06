@@ -1,0 +1,15 @@
+site:instagram.com
+
+site:instagram.com filetype:txt
+
+site: instagram.com intitle:admin
+
+site: instagram.com intext:password
+
+www.netcraft.com
+
+www.shodan.io
+
+site:github.com reddit
+
+

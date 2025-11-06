@@ -1,0 +1,47 @@
+crunch 5 7 vesit@123 -o wordlist.txt
+gzip wordlist.txt
+{
+crunch 5 7 → generate words length 5 to 7.
+<cating them. -o wordlist.txt → output to the file wordlist.txt.
+gzip wordlist.txt → compress the file after generation to wordlist.txt.gz.
+}
+
+{
+ > crunch <min_length> <max_length> -o <output_file> 
+e.g. crunch 6 8 -o wordlist.txt
+
+Option A: Use stdout with -o - (dash with space!)
+crunch 5 7 vesit@123 -o - | gzip > wordlist.txt.gz
+
+Option B: Omit -o entirely (Crunch defaults to stdout)
+crunch 5 7 vesit@123 | gzip > wordlist.txt.gz
+Both do the same thing: Crunch writes to stdout, gzip compresses on-the-fly, 
+and the result is written into wordlist.txt.gz.
+}
+
+crunch 5 7 vesit@123| gzip . wordlist.txt.gz
+
+crunch 5 7  vesit@123 -o - | gzip > wordlist.txt.gz
+
+crunch 5 7 vesit@123 | split -b 3m -d -a 3 - wordlist
+
+ls -lh wordlist.*
+
+wc -l wordlist.*
+
+head -n 20 wordlist.000
+tail -n 20 wordlist.013
+
+crunch 5 7 vesit@123 → generates words length 5–7 from charset.
+| split -b 3m -d -a 3 - wordlist. → split reads stdin (-), -b 3m sets chunk size ≈ 3 MB, -d uses numeric suffixes, -a 3 uses 3 digits so files are wordlist.000, wordlist.001, etc.
+
+4. To create a wordlist that uses the character set  - vesit@123
+> crunch 5 7 -o wordlist.txt -c vesit@123 -b 3mb
+-  5  7: Generates words of length between 5 and 7 characters
+-  -o START: Output file will be named START.
+-  -c flag for specifying the custom charset directly
+- -b 3mb: This option limits the output to 3 MB in size
+
+to uncompress file: gunzip wordlist.txt.gz
+
+

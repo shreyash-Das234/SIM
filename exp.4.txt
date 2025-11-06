@@ -1,0 +1,10 @@
+1. Open Wireshark and select the active network interface e.g. Ethernet0 
+2. Click start capturing 
+3. Open a web browser and visit any website 
+4. Stop the capture after 40-50 seconds 
+5. Use Statistics – protocol hierarchy to view all detected protocols 
+6. Apply filter like : IP(all IP packets), http, tcp.port etc.
+Use Statistics - Protocol Hierarchy to view all detected protocols:
+Filter: icmpv6
+Filter: tcp
+filter: dns

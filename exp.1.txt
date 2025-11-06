@@ -1,0 +1,37 @@
+whois instagram.com
+
+
+dig instagram.com A
+dig instagram.com MX 
+dig instagram.com NS 
+dig instagram.com SOA
+dig instagram.com ANY
+
+
+nslookup
+set type=A
+instagram.com
+
+nslookup
+set Type=MX
+instagram.com
+
+nslookup
+set Type=NS
+instagram.com
+
+nslookup
+set Type=SOA
+instagram.com
+
+nslookup
+set Type=ANY
+instagram.com
+
+
+theHarvester -d instagram.com -b bing( any website name or browser)
+
+
+sudo nmap -sS -sV -T4 -Pn <IP address>
+
+

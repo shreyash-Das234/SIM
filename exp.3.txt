@@ -1,0 +1,27 @@
+ping <ip address>
+
+nmap -sn <ip address>
+
+nmap -sn 192.168.0.0/16
+
+nmap -sT <ip address>
+
+nmap -sS <ip address>
+
+nmap -sU <Target IP>
+
+nmap -sV <ip address>
+
+nmap -O <target ip>
+
+nc <IP Address>
+
+telnet <ip address> <port no.>
+
+whatweb http://<target_ip>
+
+nikto -h http://<target_ip>
+
+
+
+
